@@ -23,15 +23,8 @@
 				{
 					"type": "git",
 					"url": "https://github.com/matwey/fips3",
-					"branch": "3.3.1"
-				},
-				{
-					"type": "file",
-					"path": "space.fips.Fips.appdata.xml"
+					"branch": "3.4.0"
 				}
-			],
-			"post-install": [
-				"install -D -m 644 space.fips.Fips.appdata.xml /app/share/appdata/space.fips.Fips.appdata.xml"
 			]
 		}
 	]
