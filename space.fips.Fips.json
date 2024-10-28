@@ -24,7 +24,14 @@
 					"type": "git",
 					"url": "https://github.com/matwey/fips3",
 					"tag": "3.4.0"
+				},
+				{
+					"type": "file",
+					"path": "space.fips.Fips.metainfo.xml"
 				}
+			],
+			"post-install": [
+				"install -D -m 644 space.fips.Fips.metainfo.xml /app/share/metainfo/space.fips.Fips.metainfo.xml"
 			]
 		}
 	]
