@@ -1,7 +1,7 @@
 {
 	"app-id": "space.fips.Fips",
 	"runtime": "org.kde.Platform",
-	"runtime-version": "5.15-23.08",
+	"runtime-version": "5.15-25.08",
 	"sdk": "org.kde.Sdk",
 	"command": "fips",
 	"finish-args": [
@@ -17,21 +17,22 @@
 			"name": "fips",
 			"buildsystem": "cmake-ninja",
 			"config-opts": [
-				"-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+				"-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+				"-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+			],
+			"post-install": [
+				"install -D -m 644 space.fips.Fips.metainfo.xml -t /app/share/metainfo/"
 			],
 			"sources": [
 				{
-					"type": "git",
-					"url": "https://github.com/matwey/fips3",
-					"tag": "3.4.0"
+					"type": "archive",
+					"url": "https://github.com/matwey/fips3/archive/3.4.0.tar.gz",
+					"sha256": "74eacb0eb944db6d32f3e97ba9243e76fda3a99539a911ac1ee6fae8393bb0c6"
 				},
 				{
 					"type": "file",
 					"path": "space.fips.Fips.metainfo.xml"
 				}
-			],
-			"post-install": [
-				"install -D -m 644 space.fips.Fips.metainfo.xml /app/share/metainfo/space.fips.Fips.metainfo.xml"
 			]
 		}
 	]
