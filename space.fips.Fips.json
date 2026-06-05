@@ -25,7 +25,8 @@
 				{
 					"type": "git",
 					"url": "https://github.com/matwey/fips3",
-					"tag": "3.5.0"
+					"//tag": "3.5.0",
+					"commit": "a4616d93cd62ffb53d833d0591be795bcb2eea42"
 				}
 			]
 		}
